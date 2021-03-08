@@ -1,0 +1,34 @@
+{% extends "poll/layout.html" %}
+
+
+    {% block body %}
+
+        <form action="{% url 'poll:results'%}" method="post">
+        {% csrf_token %}
+
+        <div class="quiz_q">
+            {% for q in question  %}
+            <h3>{{ q.question_text}}</h3>
+                <div>
+                
+                <input type="checkbox">
+                <label >{{q.choice_text}} </label><br>
+                <input type="checkbox" >
+                <label>{{q.choice_text2}}</label><br>
+                </div>
+                
+            {% endfor %}
+
+        </div>    
+        <br><input type="submit" value="Vote">
+        </form>  
+
+            
+
+
+
+             
+        
+       
+
+    {% endblock %}

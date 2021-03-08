@@ -1,0 +1,17 @@
+{% extends "poll/layout.html" %}
+
+
+    {% block body %}
+        <h1>Introductory statement</h1>
+        
+        <div class="sp1">
+            <p>Welcome to this project created mainly by Django.<br>
+            This will be a simple poll<br>
+            created to observe the various philosophical ideals<br>
+            of people.
+            I hope you enjoy this poll </p>
+        </div>
+
+        <a href="{% url 'poll:detail' %}" target = "_blank">Click here to begin</a>
+
+    {% endblock %}
